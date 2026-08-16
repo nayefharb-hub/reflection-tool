@@ -1,1 +1,267 @@
-LyogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CiAgIFBlcnNvbmFsIFJlZmxlY3Rpb25zIOKAlCBEdWFsLURvbWFpbiBSZXNpbGllbmNlIEFzc2Vzc21lbnQgKHdlYikKICAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgIEZhaXRoZnVsIHdlYiBwb3J0IG9mIHRoZSBhdHRhY2hlZCB3b3JrYm9vazoKICAgLSAyNSBZZXMvTm8gaXRlbXMgKEJQRCAiQ29yZSBJbnRlbnNpdHkiIGl0ZW1zIGludGVybGVhdmVkIHdpdGgKICAgICBwcm9mZXNzaW9uYWwgIkV4ZWN1dGl2ZSBSZXNpbGllbmNlIiBpdGVtcykKICAgLSBTYW1lIHNjb3Jpbmc6IENvcmUgSW50ZW5zaXR5ICgwLTEwKSwgRXhlY3V0aXZlIFJlc2lsaWVuY2UgKDAtMTUpCiAgIC0gU2FtZSB0aHJlc2hvbGRzLCBzYW1lIEludGVncmF0ZWQgT3BlcmF0aW9uYWwgUHJvZmlsZSwgc2FtZQogICAgIFN0cmF0ZWdpYyBHdWlkYW5jZSBDb21tZW50YXJ5LCBzYW1lIERCVCBwaWxsYXIgc3RyYXRlZ3kuCiAgIFRoZSB0YWtlciBzZWVzIHRoZWlyIE9XTiByZXN1bHRzOyByZXN1bHRzIGVtYWlsIGdvZXMgb25seSB0byB0aGVtLgogICBDcmlzaXMgcmVzb3VyY2VzIHN0aWxsIHN1cmZhY2UgaWYgdGhlIHNlbGYtaGFybSBpdGVtIGlzICJZZXMiLgogICBNdWx0aWxpbmd1YWw6IEVOIC8gQVIgKFJUTCkgLyBGUiAvIERFIC8gRVMg4oCUIHNlZSBpMThuLmpzLgogICA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0gKi8KCi8qIEl0ZW1zIGluIERJU1BMQVkgT1JERVIuIFRleHQgaXMgcmVzb2x2ZWQgcGVyLWxhbmd1YWdlIGZyb20gSVRFTV9URVhUCiAgIChpMThuLmpzKSB2aWEgcWlkLgogICBxaWQgICAgICAgPSBvcmlnaW5hbCBpdGVtIGNvZGUgKGRyaXZlcyB0ZXh0ICsgc2NvcmluZykKICAgZG9tYWluICAgID0gImNvcmUiIChCUEQvaW50ZW5zaXR5KSB8ICJleGVjIiAocmVzaWxpZW5jZSkgIFtpbnRlcm5hbCBvbmx5XQogICBjcmlzaXMgICAgPSBzZWxmLWhhcm0gaXRlbSAoUTE3KSAgKi8KY29uc3QgSVRFTVMgPSBbCiAgeyBxaWQ6IlEyNCIsIGRvbWFpbjoiZXhlYyIgfSwKICB7IHFpZDoiUTI1IiwgZG9tYWluOiJleGVjIiB9LAogIHsgcWlkOiJRMDEiLCBkb21haW46ImNvcmUiIH0sCiAgeyBxaWQ6IlEwMiIsIGRvbWFpbjoiZXhlYyIgfSwKICB7IHFpZDoiUTA0IiwgZG9tYWluOiJleGVjIiB9LAogIHsgcWlkOiJRMDMiLCBkb21haW46ImNvcmUiIH0sCiAgeyBxaWQ6IlEwNiIsIGRvbWFpbjoiZXhlYyIgfSwKICB7IHFpZDoiUTA1IiwgZG9tYWluOiJjb3JlIiB9LAogIHsgcWlkOiJRMDgiLCBkb21haW46ImV4ZWMiIH0sCiAgeyBxaWQ6IlEwNyIsIGRvbWFpbjoiY29yZSIgfSwKICB7IHFpZDoiUTEwIiwgZG9tYWluOiJleGVjIiB9LAogIHsgcWlkOiJRMDkiLCBkb21haW46ImNvcmUiIH0sCiAgeyBxaWQ6IlExMiIsIGRvbWFpbjoiZXhlYyIgfSwKICB7IHFpZDoiUTExIiwgZG9tYWluOiJjb3JlIiB9LAogIHsgcWlkOiJRMTQiLCBkb21haW46ImV4ZWMiIH0sCiAgeyBxaWQ6IlExMyIsIGRvbWFpbjoiY29yZSIgfSwKICB7IHFpZDoiUTE2IiwgZG9tYWluOiJleGVjIiB9LAogIHsgcWlkOiJRMTUiLCBkb21haW46ImNvcmUiIH0sCiAgeyBxaWQ6IlExOCIsIGRvbWFpbjoiZXhlYyIgfSwKICB7IHFpZDoiUTE3IiwgZG9tYWluOiJjb3JlIiwgY3Jpc2lzOnRydWUgfSwKICB7IHFpZDoiUTIwIiwgZG9tYWluOiJleGVjIiB9LAogIHsgcWlkOiJRMTkiLCBkb21haW46ImNvcmUiIH0sCiAgeyBxaWQ6IlEyMSIsIGRvbWFpbjoiZXhlYyIgfSwKICB7IHFpZDoiUTIyIiwgZG9tYWluOiJleGVjIiB9LAogIHsgcWlkOiJRMjMiLCBkb21haW46ImV4ZWMiIH0sCl07CgovKiAtLS0tIExhbmd1YWdlIHN0YXRlIC0tLS0gKi8KY29uc3QgREVGQVVMVF9MQU5HID0gImVuIjsKbGV0IGxhbmcgPSAobG9jYWxTdG9yYWdlLmdldEl0ZW0oInByX2xhbmciKSB8fCBuYXZpZ2F0b3IubGFuZ3VhZ2UgfHwgREVGQVVMVF9MQU5HKS5zbGljZSgwLCAyKTsKaWYgKCFUW2xhbmddKSBsYW5nID0gREVGQVVMVF9MQU5HOwpjb25zdCB0ciA9ICgpID0+IFRbbGFuZ107CgpmdW5jdGlvbiBpdGVtVGV4dChxaWQpIHsgcmV0dXJuIChJVEVNX1RFWFRbbGFuZ10gfHwgSVRFTV9URVhULmVuKVtxaWRdOyB9CgovKiAtLS0tIFN0YXRlIC0tLS0gKi8KbGV0IGlkeCA9IDA7CmNvbnN0IGFuc3dlcnMgPSBuZXcgQXJyYXkoSVRFTVMubGVuZ3RoKS5maWxsKG51bGwpOwoKLyogLS0tLSBFbGVtZW50cyAtLS0tICovCmNvbnN0IGVsID0gKGlkKSA9PiBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCk7CmNvbnN0IGludHJvID0gZWwoImludHJvIiksIHF1aXogPSBlbCgicXVpeiIpLCByZXN1bHRzID0gZWwoInJlc3VsdHMiKTsKY29uc3QgZm9ybSA9IGVsKCJxdWl6Rm9ybSIpOwpjb25zdCBuZXh0QnRuID0gZWwoIm5leHRCdG4iKSwgYmFja0J0biA9IGVsKCJiYWNrQnRuIik7CmNvbnN0IHByb2dyZXNzQmFyID0gZWwoInByb2dyZXNzQmFyIiksIHByb2dyZXNzVGV4dCA9IGVsKCJwcm9ncmVzc1RleHQiKTsKY29uc3QgbGFuZ1NlbGVjdCA9IGVsKCJsYW5nU2VsZWN0Iik7CgovKiAtLS0tIFBvcHVsYXRlIGxhbmd1YWdlIHNlbGVjdG9yIC0tLS0gKi8KTEFOR1MuZm9yRWFjaChsID0+IHsKICBjb25zdCBvcHQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJvcHRpb24iKTsKICBvcHQudmFsdWUgPSBsLmNvZGU7CiAgb3B0LnRleHRDb250ZW50ID0gbC5uYXRpdmU7CiAgbGFuZ1NlbGVjdC5hcHBlbmRDaGlsZChvcHQpOwp9KTsKbGFuZ1NlbGVjdC52YWx1ZSA9IGxhbmc7CmxhbmdTZWxlY3Qub25jaGFuZ2UgPSAoKSA9PiB7CiAgbGFuZyA9IGxhbmdTZWxlY3QudmFsdWU7CiAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oInByX2xhbmciLCBsYW5nKTsKICBhcHBseUxhbmcoKTsKfTsKCi8qIC0tLS0gQXBwbHkgbGFuZ3VhZ2UgdG8gZG9jdW1lbnQgKyBzdGF0aWMgc3RyaW5ncyAtLS0tICovCmZ1bmN0aW9uIGFwcGx5TGFuZygpIHsKICBjb25zdCBtZXRhID0gTEFOR1MuZmluZChsID0+IGwuY29kZSA9PT0gbGFuZykgfHwgTEFOR1NbMF07CiAgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LmxhbmcgPSBsYW5nOwogIGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5kaXIgPSBtZXRhLmRpcjsKCiAgY29uc3QgdCA9IHRyKCk7CiAgZG9jdW1lbnQudGl0bGUgPSB0LnRpdGxlOwogIGNvbnN0IG1kID0gZWwoIm1ldGFEZXNjIik7IGlmIChtZCkgbWQuc2V0QXR0cmlidXRlKCJjb250ZW50IiwgdC5tZXRhRGVzYyk7CiAgZWwoImxhbmdMYWJlbCIpLnRleHRDb250ZW50ID0gdC5sYW5nTGFiZWw7CgogIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoIltkYXRhLWkxOG5dIikuZm9yRWFjaChub2RlID0+IHsKICAgIGNvbnN0IGtleSA9IG5vZGUuZ2V0QXR0cmlidXRlKCJkYXRhLWkxOG4iKTsKICAgIGlmICh0W2tleV0gIT0gbnVsbCkgbm9kZS5pbm5lckhUTUwgPSB0W2tleV07CiAgfSk7CgogIC8vIFJlLXJlbmRlciBkeW5hbWljIHZpZXdzIGlmIHZpc2libGUKICBpZiAoIXF1aXouY2xhc3NMaXN0LmNvbnRhaW5zKCJoaWRkZW4iKSkgcmVuZGVyKCk7CiAgaWYgKCFyZXN1bHRzLmNsYXNzTGlzdC5jb250YWlucygiaGlkZGVuIikpIGVsKCJyZXN1bHRCb2R5IikuaW5uZXJIVE1MID0gcmVzdWx0SFRNTCgpOwp9CgplbCgic3RhcnRCdG4iKS5vbmNsaWNrID0gKCkgPT4geyBpbnRyby5jbGFzc0xpc3QuYWRkKCJoaWRkZW4iKTsgcXVpei5jbGFzc0xpc3QucmVtb3ZlKCJoaWRkZW4iKTsgcmVuZGVyKCk7IH07CmVsKCJyZXN0YXJ0QnRuIikub25jbGljayA9ICgpID0+IGxvY2F0aW9uLnJlbG9hZCgpOwpuZXh0QnRuLm9uY2xpY2sgPSBuZXh0OwpiYWNrQnRuLm9uY2xpY2sgPSBiYWNrOwoKZnVuY3Rpb24gcmVuZGVyKCkgewogIGNvbnN0IGl0ZW0gPSBJVEVNU1tpZHhdOwogIGNvbnN0IHQgPSB0cigpOwogIHByb2dyZXNzQmFyLnN0eWxlLndpZHRoID0gKChpZHgpIC8gSVRFTVMubGVuZ3RoICogMTAwKSArICIlIjsKICBwcm9ncmVzc1RleHQudGV4dENvbnRlbnQgPSB0LnF1ZXN0aW9uT2YoaWR4ICsgMSwgSVRFTVMubGVuZ3RoKTsKICBiYWNrQnRuLmNsYXNzTGlzdC50b2dnbGUoImhpZGRlbiIsIGlkeCA9PT0gMCk7CiAgbmV4dEJ0bi50ZXh0Q29udGVudCA9IGlkeCA9PT0gSVRFTVMubGVuZ3RoIC0gMSA/IHQuc2VlUmVzdWx0cyA6IHQubmV4dDsKICBiYWNrQnRuLnRleHRDb250ZW50ID0gdC5iYWNrOwoKICBjb25zdCB5ZXNubyA9IFt7IHY6IlllcyIsIGxhYmVsOnQueWVzIH0sIHsgdjoiTm8iLCBsYWJlbDp0Lm5vIH1dOwogIGZvcm0uaW5uZXJIVE1MID0gYDxwIGNsYXNzPSJxLXRleHQiPiR7aXRlbVRleHQoaXRlbS5xaWQpfTwvcD4KICAgIDxkaXYgY2xhc3M9Im9wdGlvbnMiPgogICAgICAke3llc25vLm1hcChzID0+IGAKICAgICAgICA8bGFiZWwgY2xhc3M9Im9wdCAke2Fuc3dlcnNbaWR4XSA9PT0gcy52ID8gInNlbGVjdGVkIiA6ICIifSI+CiAgICAgICAgICA8aW5wdXQgdHlwZT0icmFkaW8iIG5hbWU9ImFucyIgdmFsdWU9IiR7cy52fSIgJHthbnN3ZXJzW2lkeF0gPT09IHMudiA/ICJjaGVja2VkIiA6ICIifS8+CiAgICAgICAgICA8c3Bhbj4ke3MubGFiZWx9PC9zcGFuPgogICAgICAgIDwvbGFiZWw+YCkuam9pbigiIil9CiAgICA8L2Rpdj5gOwoKICBmb3JtLnF1ZXJ5U2VsZWN0b3JBbGwoImlucHV0W25hbWU9YW5zXSIpLmZvckVhY2goaW5wID0+IHsKICAgIGlucC5vbmNoYW5nZSA9ICgpID0+IHsKICAgICAgYW5zd2Vyc1tpZHhdID0gaW5wLnZhbHVlOwogICAgICBmb3JtLnF1ZXJ5U2VsZWN0b3JBbGwoIi5vcHQiKS5mb3JFYWNoKG8gPT4gby5jbGFzc0xpc3QucmVtb3ZlKCJzZWxlY3RlZCIpKTsKICAgICAgaW5wLmNsb3Nlc3QoIi5vcHQiKS5jbGFzc0xpc3QuYWRkKCJzZWxlY3RlZCIpOwogICAgICBuZXh0QnRuLmRpc2FibGVkID0gZmFsc2U7CiAgICB9OwogIH0pOwogIG5leHRCdG4uZGlzYWJsZWQgPSBhbnN3ZXJzW2lkeF0gPT09IG51bGw7Cn0KCmZ1bmN0aW9uIG5leHQoKSB7CiAgaWYgKGFuc3dlcnNbaWR4XSA9PT0gbnVsbCkgcmV0dXJuOwogIGlmIChpZHggPT09IElURU1TLmxlbmd0aCAtIDEpIHJldHVybiBmaW5pc2goKTsKICBpZHgrKzsgcmVuZGVyKCk7Cn0KZnVuY3Rpb24gYmFjaygpIHsgaWYgKGlkeCA+IDApIHsgaWR4LS07IHJlbmRlcigpOyB9IH0KCi8qIC0tLS0gU2NvcmluZyBlbmdpbmUg4oCUIG1pcnJvcnMgdGhlIHdvcmtib29rIGV4YWN0bHkgLS0tLSAqLwpmdW5jdGlvbiBzY29yZSgpIHsKICBjb25zdCB0ID0gdHIoKTsKICBsZXQgY29yZSA9IDAsIGV4ZWMgPSAwOwogIElURU1TLmZvckVhY2goKGl0LCBpKSA9PiB7CiAgICBpZiAoYW5zd2Vyc1tpXSA9PT0gIlllcyIpIHsKICAgICAgaWYgKGl0LmRvbWFpbiA9PT0gImNvcmUiKSBjb3JlKys7CiAgICAgIGVsc2UgZXhlYysrOwogICAgfQogIH0pOwoKICAvLyBJbnRlZ3JhdGVkIE9wZXJhdGlvbmFsIFByb2ZpbGUgKERhc2hib2FyZCFDOCBsb2dpYykKICBjb25zdCBpbnRlbnNpdHlMYWJlbCA9IGNvcmUgPj0gNyA/IHQuaW50ZW5zaXR5SGlnaCA6IHQuaW50ZW5zaXR5TG93OwogIGxldCByZXNpbGllbmNlTGFiZWw7CiAgaWYgKGV4ZWMgPj0gMTEpIHJlc2lsaWVuY2VMYWJlbCA9IHQucmVzU3Ryb25nOwogIGVsc2UgaWYgKGV4ZWMgPj0gNikgcmVzaWxpZW5jZUxhYmVsID0gdC5yZXNNb2RlcmF0ZTsKICBlbHNlIHJlc2lsaWVuY2VMYWJlbCA9IHQucmVzRGV2ZWxvcGluZzsKICBjb25zdCBwcm9maWxlID0gaW50ZW5zaXR5TGFiZWwgKyByZXNpbGllbmNlTGFiZWw7CgogIC8vIFN0cmF0ZWdpYyBHdWlkYW5jZSBDb21tZW50YXJ5IChEYXNoYm9hcmQhQzkgbG9naWMpCiAgY29uc3QgY29tbWVudGFyeSA9IGNvcmUgPj0gNyA/IHQuY29tbWVudGFyeUhpZ2ggOiB0LmNvbW1lbnRhcnlMb3c7CgogIC8vIENyaXNpcyBmbGFnOiBzZWxmLWhhcm0gaXRlbSBhbnN3ZXJlZCAiWWVzIgogIGNvbnN0IGNyaXNpc0ZsYWcgPSBJVEVNUy5zb21lKChpdCwgaSkgPT4gaXQuY3Jpc2lzICYmIGFuc3dlcnNbaV0gPT09ICJZZXMiKTsKCiAgcmV0dXJuIHsgY29yZSwgZXhlYywgcHJvZmlsZSwgY29tbWVudGFyeSwgY3Jpc2lzRmxhZywgaGlnaEludGVuc2l0eTogY29yZSA+PSA3IH07Cn0KCmZ1bmN0aW9uIGNyaXNpc0Jsb2NrKCkgewogIGNvbnN0IHQgPSB0cigpOwogIGNvbnN0IGxpbmVzID0gKENSSVNJU19MSU5FU1tsYW5nXSB8fCBDUklTSVNfTElORVMuZW4pCiAgICAubWFwKChbY291bnRyeSwgaW5mb10pID0+IGAgICAgICA8bGk+PGI+JHtjb3VudHJ5fTo8L2I+ICR7aW5mb308L2xpPmApLmpvaW4oIlxuIik7CiAgcmV0dXJuIGAKICA8ZGl2IGNsYXNzPSJjcmlzaXMiPgogICAgPGgzPiR7dC5jcmlzaXNUaXRsZX08L2gzPgogICAgPHA+JHt0LmNyaXNpc0ludHJvfTwvcD4KICAgIDx1bD4KJHtsaW5lc30KICAgICAgPGxpPjxiPiR7dC5jcmlzaXNFbHNld2hlcmV9PC9iPiAke3QuY3Jpc2lzRmluZEhlbHBsaW5lfQogICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vZmluZGFoZWxwbGluZS5jb20iIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vb3BlbmVyIj5maW5kYWhlbHBsaW5lLmNvbTwvYT48L2xpPgogICAgPC91bD4KICAgIDxwIHN0eWxlPSJtYXJnaW4tYm90dG9tOjAiPiR7dC5jcmlzaXNJbW1lZGlhdGV9PC9wPgogIDwvZGl2PmA7Cn0KCmZ1bmN0aW9uIHJlc3VsdEhUTUwoKSB7CiAgY29uc3QgdCA9IHRyKCk7CiAgY29uc3QgciA9IHNjb3JlKCk7CiAgY29uc3QgYmFkZ2VDbGFzcyA9IHIuaGlnaEludGVuc2l0eSA/ICJiYWRnZS1oaWdoIiA6ICJiYWRnZS1sb3ciOwogIGNvbnN0IGJhZGdlVGV4dCA9IHIuaGlnaEludGVuc2l0eSA/IHQuYmFkZ2VIaWdoIDogdC5iYWRnZUxvdzsKCiAgbGV0IGh0bWwgPSAiIjsKICBpZiAoci5jcmlzaXNGbGFnKSBodG1sICs9IGNyaXNpc0Jsb2NrKCk7CgogIGh0bWwgKz0gYAogICAgPHNwYW4gY2xhc3M9InJlc3VsdC1iYWRnZSAke2JhZGdlQ2xhc3N9Ij4ke2JhZGdlVGV4dH08L3NwYW4+CiAgICA8aDI+JHt0LnJlc3VsdHNIZWFkaW5nfTwvaDI+CgogICAgPGRpdiBjbGFzcz0icmVzdWx0LXNlY3Rpb24iPgogICAgICA8ZGl2IGNsYXNzPSJtZXRyaWMtZ3JpZCI+CiAgICAgICAgPGRpdiBjbGFzcz0ibWV0cmljIj4KICAgICAgICAgIDxkaXYgY2xhc3M9Im1ldHJpYy12YWx1ZSI+JHtyLmNvcmV9PHNwYW4gY2xhc3M9Im1ldHJpYy1tYXgiPi8xMDwvc3Bhbj48L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9Im1ldHJpYy1sYWJlbCI+JHt0LmNvcmVMYWJlbH08L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzPSJtZXRyaWMiPgogICAgICAgICAgPGRpdiBjbGFzcz0ibWV0cmljLXZhbHVlIj4ke3IuZXhlY308c3BhbiBjbGFzcz0ibWV0cmljLW1heCI+LzE1PC9zcGFuPjwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0ibWV0cmljLWxhYmVsIj4ke3QuZXhlY0xhYmVsfTwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InJlc3VsdC1zZWN0aW9uIj4KICAgICAgPGgzPiR7dC5wcm9maWxlSGVhZGluZ308L2gzPgogICAgICA8cCBjbGFzcz0icHJvZmlsZS1saW5lIj4ke3IucHJvZmlsZX08L3A+CiAgICA8L2Rpdj4KCiAgICA8ZGl2IGNsYXNzPSJyZXN1bHQtc2VjdGlvbiI+CiAgICAgIDxoMz4ke3QuZ3VpZGFuY2VIZWFkaW5nfTwvaDM+CiAgICAgIDxwPiR7ci5jb21tZW50YXJ5fTwvcD4KICAgIDwvZGl2PmA7CgogIGNvbnN0IHBpbGxhcnMgPSBEQlRfVEVYVFtsYW5nXSB8fCBEQlRfVEVYVC5lbjsKICBodG1sICs9IGAKICAgIDxkaXYgY2xhc3M9InJlc3VsdC1zZWN0aW9uIj4KICAgICAgPGgzPiR7dC5kYnRIZWFkaW5nfTwvaDM+CiAgICAgIDxwPiR7ci5oaWdoSW50ZW5zaXR5ID8gdC5kYnRJbnRyb0hpZ2ggOiB0LmRidEludHJvTG93fTwvcD4KICAgICAgPHRhYmxlIGNsYXNzPSJkYnQtdGFibGUiPgogICAgICAgIDx0aGVhZD48dHI+PHRoPiR7dC5kYnRDb2xQaWxsYXJ9PC90aD48dGg+JHt0LmRidENvbEZvY3VzfTwvdGg+PC90cj48L3RoZWFkPgogICAgICAgIDx0Ym9keT4KICAgICAgICAgICR7cGlsbGFycy5tYXAoKFtwLCBkXSkgPT4gYDx0cj48dGQ+PGI+JHtwfTwvYj48L3RkPjx0ZD4ke2R9PC90ZD48L3RyPmApLmpvaW4oIiIpfQogICAgICAgIDwvdGJvZHk+CiAgICAgIDwvdGFibGU+YDsKCiAgaWYgKHIuaGlnaEludGVuc2l0eSkgewogICAgaHRtbCArPSBgCiAgICAgIDxkaXYgY2xhc3M9ImNhbGxvdXQiPgogICAgICAgIDxiPiR7dC5jYWxsb3V0VGl0bGV9PC9iPiAke3QuY2FsbG91dEJvZHl9CiAgICAgIDwvZGl2PmA7CiAgfQoKICBodG1sICs9IGAKICAgICAgPHAgY2xhc3M9Im11dGVkIiBzdHlsZT0ibWFyZ2luLXRvcDoxOHB4Ij4ke3QuZGlzY2xhaW1lcn08L3A+CiAgICA8L2Rpdj5gOwoKICByZXR1cm4gaHRtbDsKfQoKLyogLS0tLSBGaW5pc2ggLS0tLSAqLwpsZXQgbGFzdFJlc3VsdCA9IG51bGw7CmZ1bmN0aW9uIGZpbmlzaCgpIHsKICBwcm9ncmVzc0Jhci5zdHlsZS53aWR0aCA9ICIxMDAlIjsKICBsYXN0UmVzdWx0ID0gc2NvcmUoKTsKICBlbCgicmVzdWx0Qm9keSIpLmlubmVySFRNTCA9IHJlc3VsdEhUTUwoKTsKICBxdWl6LmNsYXNzTGlzdC5hZGQoImhpZGRlbiIpOwogIHJlc3VsdHMuY2xhc3NMaXN0LnJlbW92ZSgiaGlkZGVuIik7CiAgd2luZG93LnNjcm9sbFRvKHsgdG9wOiAwLCBiZWhhdmlvcjogInNtb290aCIgfSk7Cn0KCi8qIC0tLS0gU2F2ZSAvIHByaW50IC0tLS0gKi8KZWwoInByaW50QnRuIikub25jbGljayA9ICgpID0+IHdpbmRvdy5wcmludCgpOwoKLyogLS0tLSBJbml0IC0tLS0gKi8KYXBwbHlMYW5nKCk7Cg==
+/* =====================================================================
+   Personal Reflections — Dual-Domain Resilience Assessment (web)
+   ---------------------------------------------------------------------
+   Faithful web port of the attached workbook:
+   - 25 Yes/No items (BPD "Core Intensity" items interleaved with
+     professional "Executive Resilience" items)
+   - Same scoring: Core Intensity (0-10), Executive Resilience (0-15)
+   - Same thresholds, same Integrated Operational Profile, same
+     Strategic Guidance Commentary, same DBT pillar strategy.
+   The taker sees their OWN results; results email goes only to them.
+   Crisis resources still surface if the self-harm item is "Yes".
+   Multilingual: EN / AR (RTL) / FR / DE / ES — see i18n.js.
+   ===================================================================== */
+
+/* Items in DISPLAY ORDER. Text is resolved per-language from ITEM_TEXT
+   (i18n.js) via qid.
+   qid       = original item code (drives text + scoring)
+   domain    = "core" (BPD/intensity) | "exec" (resilience)  [internal only]
+   crisis    = self-harm item (Q17)  */
+const ITEMS = [
+  { qid:"Q24", domain:"exec" },
+  { qid:"Q25", domain:"exec" },
+  { qid:"Q01", domain:"core" },
+  { qid:"Q02", domain:"exec" },
+  { qid:"Q04", domain:"exec" },
+  { qid:"Q03", domain:"core" },
+  { qid:"Q06", domain:"exec" },
+  { qid:"Q05", domain:"core" },
+  { qid:"Q08", domain:"exec" },
+  { qid:"Q07", domain:"core" },
+  { qid:"Q10", domain:"exec" },
+  { qid:"Q09", domain:"core" },
+  { qid:"Q12", domain:"exec" },
+  { qid:"Q11", domain:"core" },
+  { qid:"Q14", domain:"exec" },
+  { qid:"Q13", domain:"core" },
+  { qid:"Q16", domain:"exec" },
+  { qid:"Q15", domain:"core" },
+  { qid:"Q18", domain:"exec" },
+  { qid:"Q17", domain:"core", crisis:true },
+  { qid:"Q20", domain:"exec" },
+  { qid:"Q19", domain:"core" },
+  { qid:"Q21", domain:"exec" },
+  { qid:"Q22", domain:"exec" },
+  { qid:"Q23", domain:"exec" },
+];
+
+/* ---- Language state ---- */
+const DEFAULT_LANG = "en";
+let lang = (localStorage.getItem("pr_lang") || navigator.language || DEFAULT_LANG).slice(0, 2);
+if (!T[lang]) lang = DEFAULT_LANG;
+const tr = () => T[lang];
+
+function itemText(qid) { return (ITEM_TEXT[lang] || ITEM_TEXT.en)[qid]; }
+
+/* ---- State ---- */
+let idx = 0;
+const answers = new Array(ITEMS.length).fill(null);
+
+/* ---- Elements ---- */
+const el = (id) => document.getElementById(id);
+const intro = el("intro"), quiz = el("quiz"), results = el("results");
+const form = el("quizForm");
+const nextBtn = el("nextBtn"), backBtn = el("backBtn");
+const progressBar = el("progressBar"), progressText = el("progressText");
+const langSelect = el("langSelect");
+
+/* ---- Populate language selector ---- */
+LANGS.forEach(l => {
+  const opt = document.createElement("option");
+  opt.value = l.code;
+  opt.textContent = l.native;
+  langSelect.appendChild(opt);
+});
+langSelect.value = lang;
+langSelect.onchange = () => {
+  lang = langSelect.value;
+  localStorage.setItem("pr_lang", lang);
+  applyLang();
+};
+
+/* ---- Apply language to document + static strings ---- */
+function applyLang() {
+  const meta = LANGS.find(l => l.code === lang) || LANGS[0];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = meta.dir;
+
+  const t = tr();
+  document.title = t.title;
+  const md = el("metaDesc"); if (md) md.setAttribute("content", t.metaDesc);
+  el("langLabel").textContent = t.langLabel;
+
+  document.querySelectorAll("[data-i18n]").forEach(node => {
+    const key = node.getAttribute("data-i18n");
+    if (t[key] != null) node.innerHTML = t[key];
+  });
+
+  // Re-render dynamic views if visible
+  if (!quiz.classList.contains("hidden")) render();
+  if (!results.classList.contains("hidden")) el("resultBody").innerHTML = resultHTML();
+}
+
+el("startBtn").onclick = () => { intro.classList.add("hidden"); quiz.classList.remove("hidden"); render(); };
+el("restartBtn").onclick = () => location.reload();
+nextBtn.onclick = next;
+backBtn.onclick = back;
+
+function render() {
+  const item = ITEMS[idx];
+  const t = tr();
+  progressBar.style.width = ((idx) / ITEMS.length * 100) + "%";
+  progressText.textContent = t.questionOf(idx + 1, ITEMS.length);
+  backBtn.classList.toggle("hidden", idx === 0);
+  nextBtn.textContent = idx === ITEMS.length - 1 ? t.seeResults : t.next;
+  backBtn.textContent = t.back;
+
+  const yesno = [{ v:"Yes", label:t.yes }, { v:"No", label:t.no }];
+  form.innerHTML = `<p class="q-text">${itemText(item.qid)}</p>
+    <div class="options">
+      ${yesno.map(s => `
+        <label class="opt ${answers[idx] === s.v ? "selected" : ""}">
+          <input type="radio" name="ans" value="${s.v}" ${answers[idx] === s.v ? "checked" : ""}/>
+          <span>${s.label}</span>
+        </label>`).join("")}
+    </div>`;
+
+  form.querySelectorAll("input[name=ans]").forEach(inp => {
+    inp.onchange = () => {
+      answers[idx] = inp.value;
+      form.querySelectorAll(".opt").forEach(o => o.classList.remove("selected"));
+      inp.closest(".opt").classList.add("selected");
+      nextBtn.disabled = false;
+    };
+  });
+  nextBtn.disabled = answers[idx] === null;
+}
+
+function next() {
+  if (answers[idx] === null) return;
+  if (idx === ITEMS.length - 1) return finish();
+  idx++; render();
+}
+function back() { if (idx > 0) { idx--; render(); } }
+
+/* ---- Scoring engine — mirrors the workbook exactly ---- */
+function score() {
+  const t = tr();
+  let core = 0, exec = 0;
+  ITEMS.forEach((it, i) => {
+    if (answers[i] === "Yes") {
+      if (it.domain === "core") core++;
+      else exec++;
+    }
+  });
+
+  // Integrated Operational Profile (Dashboard!C8 logic)
+  const intensityLabel = core >= 7 ? t.intensityHigh : t.intensityLow;
+  let resilienceLabel;
+  if (exec >= 11) resilienceLabel = t.resStrong;
+  else if (exec >= 6) resilienceLabel = t.resModerate;
+  else resilienceLabel = t.resDeveloping;
+  const profile = intensityLabel + resilienceLabel;
+
+  // Strategic Guidance Commentary (Dashboard!C9 logic)
+  const commentary = core >= 7 ? t.commentaryHigh : t.commentaryLow;
+
+  // Crisis flag: self-harm item answered "Yes"
+  const crisisFlag = ITEMS.some((it, i) => it.crisis && answers[i] === "Yes");
+
+  return { core, exec, profile, commentary, crisisFlag, highIntensity: core >= 7 };
+}
+
+function crisisBlock() {
+  const t = tr();
+  const lines = (CRISIS_LINES[lang] || CRISIS_LINES.en)
+    .map(([country, info]) => `      <li><b>${country}:</b> ${info}</li>`).join("\n");
+  return `
+  <div class="crisis">
+    <h3>${t.crisisTitle}</h3>
+    <p>${t.crisisIntro}</p>
+    <ul>
+${lines}
+      <li><b>${t.crisisElsewhere}</b> ${t.crisisFindHelpline}
+        <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a></li>
+    </ul>
+    <p style="margin-bottom:0">${t.crisisImmediate}</p>
+  </div>`;
+}
+
+function resultHTML() {
+  const t = tr();
+  const r = score();
+  const badgeClass = r.highIntensity ? "badge-high" : "badge-low";
+  const badgeText = r.highIntensity ? t.badgeHigh : t.badgeLow;
+
+  let html = "";
+  if (r.crisisFlag) html += crisisBlock();
+
+  html += `
+    <span class="result-badge ${badgeClass}">${badgeText}</span>
+    <h2>${t.resultsHeading}</h2>
+
+    <div class="result-section">
+      <div class="metric-grid">
+        <div class="metric">
+          <div class="metric-value">${r.core}<span class="metric-max">/10</span></div>
+          <div class="metric-label">${t.coreLabel}</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">${r.exec}<span class="metric-max">/15</span></div>
+          <div class="metric-label">${t.execLabel}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-section">
+      <h3>${t.profileHeading}</h3>
+      <p class="profile-line">${r.profile}</p>
+    </div>
+
+    <div class="result-section">
+      <h3>${t.guidanceHeading}</h3>
+      <p>${r.commentary}</p>
+    </div>`;
+
+  const pillars = DBT_TEXT[lang] || DBT_TEXT.en;
+  html += `
+    <div class="result-section">
+      <h3>${t.dbtHeading}</h3>
+      <p>${r.highIntensity ? t.dbtIntroHigh : t.dbtIntroLow}</p>
+      <table class="dbt-table">
+        <thead><tr><th>${t.dbtColPillar}</th><th>${t.dbtColFocus}</th></tr></thead>
+        <tbody>
+          ${pillars.map(([p, d]) => `<tr><td><b>${p}</b></td><td>${d}</td></tr>`).join("")}
+        </tbody>
+      </table>`;
+
+  if (r.highIntensity) {
+    html += `
+      <div class="callout">
+        <b>${t.calloutTitle}</b> ${t.calloutBody}
+      </div>`;
+  }
+
+  html += `
+      <p class="muted" style="margin-top:18px">${t.disclaimer}</p>
+    </div>`;
+
+  return html;
+}
+
+/* ---- Finish ---- */
+let lastResult = null;
+function finish() {
+  progressBar.style.width = "100%";
+  lastResult = score();
+  el("resultBody").innerHTML = resultHTML();
+  quiz.classList.add("hidden");
+  results.classList.remove("hidden");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+/* ---- Save / print ---- */
+el("printBtn").onclick = () => window.print();
+
+/* ---- Init ---- */
+applyLang();

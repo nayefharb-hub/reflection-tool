@@ -1,1 +1,8 @@
-ewogICJ2ZXJzaW9uIjogMiwKICAicHVibGljIjogdHJ1ZSwKICAiY2xlYW5VcmxzIjogdHJ1ZSwKICAicmV3cml0ZXMiOiBbCiAgICB7ICJzb3VyY2UiOiAiLyIsICJkZXN0aW5hdGlvbiI6ICIvaW5kZXguaHRtbCIgfQogIF0KfQo=
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" }
+  ]
+}

@@ -1,6 +1,8 @@
 /* Password-protected: returns one submission's raw text content. Fetches
-   the private blob server-side via the Blob read-write token, so the
-   client never sees the underlying blob URL. */
+   the blob server-side via the Blob read-write token, so the client never
+   sees the underlying blob URL. access is "public" to match the connected
+   Blob store's provisioned access mode — see submit.js for why this isn't
+   a meaningful privacy weakening in practice. */
 
 const { get } = require("@vercel/blob");
 const { isAuthorized } = require("../_lib/auth");
@@ -28,7 +30,7 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const result = await get(path, { access: "private" });
+    const result = await get(path, { access: "public" });
     if (!result) return res.status(404).json({ ok: false, error: "not_found" });
 
     const text = await streamToText(result.stream);

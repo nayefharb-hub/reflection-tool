@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Submissions — Admin</title>
+<style>
+  :root {
+    --bg:#f7f7f7; --card:#ffffff; --ink:#212529; --muted:#6c757d;
+    --border:#e2e5e9; --brand:#0b3d91; --danger:#b02a37;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; padding:32px 16px; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  .wrap { max-width:900px; margin:0 auto; }
+  .card {
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:24px; margin-bottom:16px;
+  }
+  h1 { font-size:1.25rem; margin:0 0 16px; }
+  label { display:block; font-size:0.85rem; color:var(--muted); margin-bottom:6px; }
+  input[type="password"] {
+    width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:6px;
+    font-size:1rem; margin-bottom:12px;
+  }
+  button {
+    background:var(--brand); color:#fff; border:none; border-radius:6px;
+    padding:10px 16px; font-size:0.95rem; cursor:pointer;
+  }
+  button.ghost { background:transparent; color:var(--brand); border:1px solid var(--border); }
+  button:disabled { opacity:0.6; cursor:default; }
+  .error { color:var(--danger); font-size:0.9rem; margin:0 0 12px; }
+  table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+  th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--border); }
+  th { color:var(--muted); font-weight:600; font-size:0.8rem; text-transform:uppercase; }
+  tr.row:hover { background:#f0f4fb; cursor:pointer; }
+  .toolbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+  .muted { color:var(--muted); font-size:0.85rem; }
+  pre {
+    white-space:pre-wrap; word-break:break-word; background:#f7f8fa;
+    border:1px solid var(--border); border-radius:6px; padding:16px;
+    max-height:70vh; overflow:auto; font-size:0.85rem; line-height:1.5;
+  }
+  .hidden { display:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section id="loginCard" class="card">
+    <h1>Submissions — Admin</h1>
+    <p id="loginError" class="error hidden"></p>
+    <label for="pwInput">Admin password</label>
+    <input type="password" id="pwInput" autocomplete="current-password" />
+    <button id="loginBtn">Log in</button>
+  </section>
+
+  <section id="listCard" class="card hidden">
+    <div class="toolbar">
+      <h1 style="margin:0">Submissions</h1>
+      <div>
+        <button class="ghost" id="refreshBtn">Refresh</button>
+        <button class="ghost" id="logoutBtn">Log out</button>
+      </div>
+    </div>
+    <p id="listError" class="error hidden"></p>
+    <p id="listEmpty" class="muted hidden">No submissions yet.</p>
+    <table id="listTable" class="hidden">
+      <thead><tr><th>Date / time (UTC)</th><th>Language</th><th>Size</th></tr></thead>
+      <tbody id="listBody"></tbody>
+    </table>
+  </section>
+
+  <section id="detailCard" class="card hidden">
+    <div class="toolbar">
+      <h1 style="margin:0" id="detailTitle">Submission</h1>
+      <button class="ghost" id="backBtn">Back to list</button>
+    </div>
+    <pre id="detailBody"></pre>
+  </section>
+
+</div>
+
+<script>
+  const el = (id) => document.getElementById(id);
+  const loginCard = el("loginCard"), listCard = el("listCard"), detailCard = el("detailCard");
+  const pwInput = el("pwInput"), loginBtn = el("loginBtn"), loginError = el("loginError");
+  const listBody = el("listBody"), listTable = el("listTable"), listEmpty = el("listEmpty"), listError = el("listError");
+
+  function authHeader() {
+    return { "Authorization": "Bearer " + sessionStorage.getItem("admin_pw") };
+  }
+
+  function showLogin(message) {
+    loginCard.classList.remove("hidden");
+    listCard.classList.add("hidden");
+    detailCard.classList.add("hidden");
+    if (message) {
+      loginError.textContent = message;
+      loginError.classList.remove("hidden");
+    }
+  }
+
+  function parsePathname(pathname) {
+    // submissions/2026-08-16T18-35-07-211Z_en.txt
+    const name = pathname.split("/").pop() || pathname;
+    const m = name.match(/^(.+?)_([a-zA-Z-]+)\.txt$/);
+    if (!m) return { date: name, lang: "" };
+    const iso = m[1].replace(
+      /^(\d{4}-\d{2}-\d{2})T(\d{2})-(\d{2})-(\d{2})-(\d{3})Z$/,
+      "$1 $2:$3:$4 UTC"
+    );
+    return { date: iso, lang: m[2] };
+  }
+
+  function formatSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    return (bytes / 1024).toFixed(1) + " KB";
+  }
+
+  async function loadList() {
+    listError.classList.add("hidden");
+    listEmpty.classList.add("hidden");
+    listTable.classList.add("hidden");
+
+    const res = await fetch("/api/admin/list", { headers: authHeader() });
+    if (res.status === 401) {
+      sessionStorage.removeItem("admin_pw");
+      showLogin("Incorrect password.");
+      return;
+    }
+    if (!res.ok) {
+      listError.textContent = "Failed to load submissions.";
+      listError.classList.remove("hidden");
+      return;
+    }
+    const data = await res.json();
+
+    if (!data.items.length) {
+      listEmpty.classList.remove("hidden");
+      return;
+    }
+
+    listBody.innerHTML = data.items.map((item) => {
+      const { date, lang } = parsePathname(item.pathname);
+      return `<tr class="row" data-path="${item.pathname}">
+        <td>${date}</td><td>${lang}</td><td>${formatSize(item.size)}</td>
+      </tr>`;
+    }).join("");
+    listTable.classList.remove("hidden");
+
+    listBody.querySelectorAll("tr.row").forEach((tr) => {
+      tr.onclick = () => loadDetail(tr.getAttribute("data-path"));
+    });
+  }
+
+  async function loadDetail(pathname) {
+    const res = await fetch("/api/admin/read?path=" + encodeURIComponent(pathname), { headers: authHeader() });
+    if (res.status === 401) {
+      sessionStorage.removeItem("admin_pw");
+      showLogin("Incorrect password.");
+      return;
+    }
+    if (!res.ok) {
+      alert("Failed to load that submission.");
+      return;
+    }
+    const text = await res.text();
+    el("detailTitle").textContent = parsePathname(pathname).date;
+    el("detailBody").textContent = text;
+    listCard.classList.add("hidden");
+    detailCard.classList.remove("hidden");
+  }
+
+  loginBtn.onclick = async () => {
+    const pw = pwInput.value;
+    if (!pw) return;
+    sessionStorage.setItem("admin_pw", pw);
+    loginBtn.disabled = true;
+    try {
+      const res = await fetch("/api/admin/list", { headers: authHeader() });
+      if (res.status === 401) {
+        sessionStorage.removeItem("admin_pw");
+        loginError.textContent = "Incorrect password.";
+        loginError.classList.remove("hidden");
+        return;
+      }
+      loginError.classList.add("hidden");
+      loginCard.classList.add("hidden");
+      listCard.classList.remove("hidden");
+      await loadList();
+    } finally {
+      loginBtn.disabled = false;
+    }
+  };
+  pwInput.onkeydown = (e) => { if (e.key === "Enter") loginBtn.click(); };
+
+  el("refreshBtn").onclick = loadList;
+  el("backBtn").onclick = () => { detailCard.classList.add("hidden"); listCard.classList.remove("hidden"); };
+  el("logoutBtn").onclick = () => { sessionStorage.removeItem("admin_pw"); showLogin(""); loginError.classList.add("hidden"); };
+
+  // Resume session if a password is already stashed for this tab
+  if (sessionStorage.getItem("admin_pw")) {
+    loginCard.classList.add("hidden");
+    listCard.classList.remove("hidden");
+    loadList();
+  }
+</script>
+</body>
+</html>

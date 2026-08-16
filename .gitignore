@@ -1,2 +1,6 @@
-pull.mjs 
-list-deployments.mjs 
+pull.mjs
+list-deployments.mjs
+
+# Saved assessment submissions — contains sensitive personal data, never commit
+src/submissions/
+node_modules/

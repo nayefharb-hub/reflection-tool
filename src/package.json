@@ -1,1 +1,12 @@
-ewogICJuYW1lIjogImVtb3Rpb25hbC1wYXR0ZXJucy1yZWZsZWN0aW9uIiwKICAidmVyc2lvbiI6ICIxLjAuMCIsCiAgImRlc2NyaXB0aW9uIjogIkEgcHJpdmF0ZSBzZWxmLXJlZmxlY3Rpb24gb24gZW1vdGlvbmFsIGFuZCByZWxhdGlvbnNoaXAgcGF0dGVybnMsIHdpdGggc2VsZi1zY29yZWQgdGllcmVkIHJlc3VsdHMgdGhhdCBjYW4gYmUgc2F2ZWQgYXMgYSBQREYuIiwKICAibWFpbiI6ICJzZXJ2ZXIuanMiLAogICJzY3JpcHRzIjogewogICAgInN0YXJ0IjogIm5vZGUgc2VydmVyLmpzIgogIH0sCiAgImRlcGVuZGVuY2llcyI6IHsKICAgICJleHByZXNzIjogIl40LjE5LjIiCiAgfQp9Cg==
+{
+  "name": "emotional-patterns-reflection",
+  "version": "1.0.0",
+  "description": "A private self-reflection on emotional and relationship patterns, with self-scored tiered results that can be saved as a PDF.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

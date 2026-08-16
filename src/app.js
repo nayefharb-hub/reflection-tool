@@ -249,6 +249,46 @@ function resultHTML() {
   return html;
 }
 
+/* ---- Session record (saved server-side, one file per completed assessment) ---- */
+function buildRecordText(r) {
+  const t = tr();
+  const meta = LANGS.find(l => l.code === lang) || LANGS[0];
+  const now = new Date();
+  const lines = [
+    t.recordTitle,
+    `${t.recordDate}: ${now.toISOString().slice(0, 10)}`,
+    `${t.recordTime}: ${now.toISOString().slice(11, 19)} UTC`,
+    `${t.recordLanguage}: ${meta.native} (${lang})`,
+    "",
+  ];
+
+  ITEMS.forEach((item, i) => {
+    lines.push(`Q${i + 1}: ${itemText(item.qid)}`);
+    lines.push(`A${i + 1}: ${answers[i] === "Yes" ? t.yes : t.no}`);
+    lines.push("");
+  });
+
+  lines.push("----------------------------------------");
+  lines.push(t.resultsHeading);
+  lines.push("----------------------------------------");
+  lines.push(`${t.coreLabel}: ${r.core}/10`);
+  lines.push(`${t.execLabel}: ${r.exec}/15`);
+  lines.push(`${t.profileHeading}: ${r.profile}`);
+  lines.push(`${t.guidanceHeading}: ${r.commentary}`);
+  lines.push(`${t.recordCrisisFlag}: ${r.crisisFlag ? t.yes : t.no}`);
+
+  return lines.join("\n");
+}
+
+function saveRecord(r) {
+  fetch("/api/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text: buildRecordText(r), language: lang }),
+    keepalive: true,
+  }).catch(() => { /* best-effort save; never block the results screen on this */ });
+}
+
 /* ---- Finish ---- */
 let lastResult = null;
 function finish() {
@@ -258,6 +298,7 @@ function finish() {
   quiz.classList.add("hidden");
   results.classList.remove("hidden");
   window.scrollTo({ top: 0, behavior: "smooth" });
+  saveRecord(lastResult);
 }
 
 /* ---- Save / print ---- */

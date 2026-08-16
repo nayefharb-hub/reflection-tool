@@ -154,7 +154,7 @@ function score() {
   });
 
   // Integrated Operational Profile (Dashboard!C8 logic)
-  const intensityLabel = core >= 7 ? t.intensityHigh : t.intensityLow;
+  const intensityLabel = core >= 5 ? t.intensityHigh : t.intensityLow;
   let resilienceLabel;
   if (exec >= 11) resilienceLabel = t.resStrong;
   else if (exec >= 6) resilienceLabel = t.resModerate;
@@ -162,12 +162,12 @@ function score() {
   const profile = intensityLabel + resilienceLabel;
 
   // Strategic Guidance Commentary (Dashboard!C9 logic)
-  const commentary = core >= 7 ? t.commentaryHigh : t.commentaryLow;
+  const commentary = core >= 5 ? t.commentaryHigh : t.commentaryLow;
 
   // Crisis flag: self-harm item answered "Yes"
   const crisisFlag = ITEMS.some((it, i) => it.crisis && answers[i] === "Yes");
 
-  return { core, exec, profile, commentary, crisisFlag, highIntensity: core >= 7 };
+  return { core, exec, profile, commentary, crisisFlag, highIntensity: core >= 5 };
 }
 
 function crisisBlock() {

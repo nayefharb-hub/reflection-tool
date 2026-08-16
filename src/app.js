@@ -263,7 +263,8 @@ function buildRecordText(r) {
   ];
 
   ITEMS.forEach((item, i) => {
-    lines.push(`Q${i + 1}: ${itemText(item.qid)}`);
+    const tag = item.domain === "core" ? ` [${t.recordCoreTag}]` : "";
+    lines.push(`Q${i + 1}${tag}: ${itemText(item.qid)}`);
     lines.push(`A${i + 1}: ${answers[i] === "Yes" ? t.yes : t.no}`);
     lines.push("");
   });
